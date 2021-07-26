@@ -1,0 +1,8 @@
+{
+  "name": "MyCoronaApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

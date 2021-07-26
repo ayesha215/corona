@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+   
+    <ion-title>
+      Coronavirus update - Summary
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+   
+<ion-content [fullscreen]="true"><br/><br/>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Confirmed Cases</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    <ion-text><ion-label color="primary">Total Confirmed : {{global?.TotalConfirmed | number }}</ion-label> </ion-text><br/>
+    <ion-text><ion-label color="primary">New Confirmed : {{global?.NewConfirmed | number }}</ion-label> </ion-text><br/>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card> 
+    <ion-card-header>
+      <ion-card-title>Deaths</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+   
+    <ion-text><ion-label color="danger">TotalDeaths  : {{global?.TotalDeaths | number }}</ion-label> </ion-text><br/>
+    <ion-text><ion-label color="danger">NewDeaths : {{global?.NewDeaths| number }}</ion-label></ion-text><br/>
+    
+    </ion-card-content>
+  </ion-card> 
+
+  <ion-card>
+    <ion-card-header>
+      
+      <ion-card-title>Recovered Cases</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+    <ion-text><ion-label color="tertiary">Total Recovered: {{global?.TotalRecovered | number }}</ion-label> </ion-text><br/>
+    <ion-text><ion-label color="tertiary">New Recovered : {{global?.NewRecovered | number }}</ion-label> </ion-text><br/>
+ 
+    </ion-card-content>
+  </ion-card> <br/>
+
+  <ion-button  (click)="RedirectToGraphPage()" expand="block"  >View Graph</ion-button>

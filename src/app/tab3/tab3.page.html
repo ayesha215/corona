@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title>
+      Report CoronaVirus Case
+    </ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides #signupSlider>
+
+    <ion-slide>
+      <p *ngIf="submitAttempt" style="color: #ea6153;">Please fill out all details accurately.</p>
+
+      <ion-list lines="none">
+        <br>
+        <br>
+          <form [formGroup]="slideOneForm">
+
+           
+             
+            <ion-card>
+              <ion-item>
+                  <ion-label position="floating">Name</ion-label>
+                  <ion-input formControlName="lastName" type="text"></ion-input>
+              </ion-item>
+            </ion-card>
+
+            <ion-card>
+              <ion-item>
+                  <ion-label position="floating">Age</ion-label>
+                  <ion-input formControlName="age" type="text"></ion-input>
+              </ion-item>
+            </ion-card>
+
+        
+
+
+            <ion-card>
+              <ion-item>
+                  <ion-label position="floating">City/Region</ion-label>
+                  <ion-input formControlName="city" type="text"></ion-input>
+              </ion-item>
+            </ion-card>
+
+            <ion-card>
+              <ion-item>
+                  <ion-label position="floating">Date</ion-label>
+                  <ion-input formControlName="date" type="number"></ion-input>
+              </ion-item>
+            </ion-card>
+           
+            <ion-card>
+              <ion-item>
+                <ion-label position="floating">Total Cases</ion-label>
+                <ion-input formControlName="totalcases" type="number"></ion-input>
+            </ion-item>
+          </ion-card>
+          </form>
+      
+      </ion-list>
+
+      <ion-button expand="full" color="primary" (click)="save()">Submit Case</ion-button>
+    </ion-slide>
+         
+   
+
+   
+    
+
+  </ion-slides>
+
+</ion-content>
